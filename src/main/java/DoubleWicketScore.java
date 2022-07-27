@@ -18,11 +18,8 @@ public class DoubleWicketScore {
         return new DoubleWicketScore(this.runs + delivery.runs(), this.deliveriesBowled + delivery.incrementDeliveriesBy());
     }
 
-    public int getRuns() {
-        return this.runs;
-    }
-
-    public int getDeliveries() {
-        return deliveriesBowled;
+    void assertThatScoreIs(int runs, int deliveries) {
+        assert this.runs == runs;
+        assert deliveriesBowled == deliveries;
     }
 }
